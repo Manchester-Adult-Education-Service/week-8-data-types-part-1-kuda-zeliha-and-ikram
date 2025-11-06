@@ -116,8 +116,16 @@ if additionalitems == "yes":
     new_item["location"] = itemlocation2
     found_items.append(new_item)
 #print = ({"name": "bag", "colour": "red", "location": "moss side"})
+
+print (len(found_items))
+counter = 1
+for i in found_items:
+    print(f"item number: {counter} {i["name"]}, {i["colour"]} found at {i["location"]}")
+    counter += 1
 else:
     print("item not added Try again ")
+
+
 
 
 
