@@ -56,7 +56,10 @@ print("-------------------------------------------\n"
 # Recorded: wallet (black) found at train station
 #
 # Write your code below:
-
+itemname = input("what is the name of item")
+items = {"name": "bag", "colour": "red", "location": "moss side"}
+print(items ["name"]) 
+ 
 # HINT: Create dictionary syntax is:
 # my_dict = {"key1": value1, "key2": value2, "key3": value3}
 
@@ -97,6 +100,34 @@ print("-------------------------------------------\n"
 # Item 2: phone (silver) - Found at: shopping centre
 #
 # Write your code below:
+itemname = input("what is the item's name")
+itemcolour = input("What is the item's colour?")
+itemlocation = input("Where is the item?")
+found_items = []
+found_items.append(items)
+additionalitems = input("Do want to add another item? Yes or No?")
+if additionalitems == "yes":
+    itemname2 = input("what is the item's name")
+    itemcolour2 = input("What is the item's colour?")
+    itemlocation2 = input("Where is the item?")
+    new_item = {}
+    new_item["name"] = itemname2
+    new_item["colour"] = itemcolour2
+    new_item["location"] = itemlocation2
+    found_items.append(new_item)
+#print = ({"name": "bag", "colour": "red", "location": "moss side"})
+
+print (len(found_items))
+counter = 1
+for i in found_items:
+    print(f"item number: {counter} {i["name"]}, {i["colour"]} found at {i["location"]}")
+    counter += 1
+else:
+    print("item not added Try again ")
+
+
+
+
 
 # HINT: To access dictionary values, use: dictionary_name["key_name"]
 # Example: found_item["name"] gets the name value
@@ -148,7 +179,15 @@ print("-------------------------------------------\n"
 # Total items: 2
 #
 # Write your code below:
-
+print("=== FOUND ITEMS RECORDS ===")
+if len(found_items) == 0:
+    print("no item recorded yet")
+else:
+    for i in found_items:
+       new_counter = 1
+for i in found_items:
+    print(f"item number: {new_counter} {i["name"]}, {i["colour"]} found at {i["location"]}")
+    new_counter += 1
 # HINT: When looping through a list of dictionaries:
 # for item in found_items:
 #     print(item["name"])  # Access the name from each dictionary
