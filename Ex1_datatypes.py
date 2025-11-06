@@ -179,7 +179,15 @@ print("-------------------------------------------\n"
 # Total items: 2
 #
 # Write your code below:
-
+print("=== FOUND ITEMS RECORDS ===")
+if len(found_items) == 0:
+    print("no item recorded yet")
+else:
+    for i in found_items:
+       new_counter = 1
+for i in found_items:
+    print(f"item number: {new_counter} {i["name"]}, {i["colour"]} found at {i["location"]}")
+    new_counter += 1
 # HINT: When looping through a list of dictionaries:
 # for item in found_items:
 #     print(item["name"])  # Access the name from each dictionary
